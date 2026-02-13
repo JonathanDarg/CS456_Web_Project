@@ -1,1 +1,0 @@
-images in this folder are used in the WebPage module.
