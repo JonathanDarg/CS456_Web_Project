@@ -14,10 +14,10 @@
 /* Proper Bootstrap variable override */
 .hero-btn {
   --bs-btn-color: #fff !important;
-  --bs-btn-bg: #674636 !important;
+  --bs-btn-bg: #675D50 !important;
 
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #7A5746;
+  --bs-btn-hover-bg: #A9907E;
 
   --bs-btn-active-bg: #56382B;
   --bs-btn-active-border-color: #56382B;

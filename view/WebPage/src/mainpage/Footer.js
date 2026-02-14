@@ -9,3 +9,7 @@ class FooterElement extends HTMLElement {
 }
 
 customElements.define("footer-element", FooterElement);
+
+function SayContact(){
+    window.alert("Contact us on our social media pages or email us at ForeverPaws@gmail.com");
+}
