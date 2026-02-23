@@ -1,0 +1,96 @@
+
+.navbar {
+  background-color: #675D50 !important;
+}
+
+.navbar .nav-link {
+  color: white;
+}
+
+.navbar .nav-link:hover {
+  color: lightgrey;
+}
+
+.brand-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+
+.hero-bg {
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("../public/images/pups.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-btn {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #A78E6D;
+
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #524C43;
+
+}
+
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.dog-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+
+.care-text {
+  max-width: 800px;
+  margin: auto;
+}
+
+.care-list {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+
+footer {
+  background-color: #675D50 !important;
+  color: #ffffff;
+}
+
+footer .footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+footer .footer-links a:hover {
+  color: lightgrey !important;
+}
+
+footer .btn-primary {
+  background-color: #A78E6D;
+  border-color: #675D50;
+}
+
+footer .btn-primary:hover {
+  background-color: #524C43;
+  border-color: #524C43;
+}
+

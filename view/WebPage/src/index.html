@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forever Paws</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+   <nav class="navbar navbar-expand-sm navbar-dark bg-black">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="../public/images/Logo3.png" width="110" height="60"/> 
+          <span class="brand-text ms-2">Forever Paws</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav mx-auto gap-0 text-center">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="bi bi-house-door-fill"></i> Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="dogs.html" class="nav-link">
+                <i class="fa-solid fa-dog"></i> Dogs
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="bi bi-heart-fill"></i> Adoption
+              </a>
+            </li>
+             <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="bi bi-star-fill"></i> Care Tips
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="bi bi-calendar-event-fill"></i> Events
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="bi bi-person-arms-up"></i> Volunteer
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"
+                ><i class="bi bi-envelope-fill"></i> Contact
+              </a>
+            </li>
+            <li class="nav-item ms-4">
+              <a href="#" class="nav-link fw-semibold"
+              ><i class="bi bi-currency-dollar"></i> Donations </a>
+            </li>
+          </ul>
+
+          <div class="d-flex">
+            <a href="#" class="btn btn-outline-light rounded-pill px-4">
+              <i class="bi bi-person-fill"></i> Login
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+  <section class="hero-bg text-white">
+    <div class="container py-5 text-center">
+        <h1 class="display-4 mb-4">Welcome to Forever Paws!</h1>
+        <p class="lead mb-5 w-75 mx-auto">
+          We are dedicated to finding loving homes for dogs in need. Explore our
+          website to learn more about our mission, available dogs for adoption,
+          upcoming events, and how you can get involved.
+        </p>
+        <button type="button" onclick="AvailableDogs()" class="btn hero-btn btn-lg rounded-pill px-5">
+          View Available Dogs
+        </button>
+      </div>
+  </section>
+
+  
+  <section class="container my-5">
+    <div class="row align-items-center">
+
+      <div class="col-lg-6">
+        <img src="../public/images/adopt3.png" class="img-fluid rounded">
+      </div>
+
+      <div class="col-lg-6">
+        <h2>Our Mission</h2>
+        <p>
+          At Forever Paws, our mission is to provide a safe and loving
+          environment for dogs in need while actively working toward
+          finding them forever homes.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Available Dogs for Adoption</h2>
+
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="card text-center mb-4">
+          <img src="../public/images/chihuahua.png" class="card-img-top">
+          <div class="card-body">
+            <h5>Bella</h5>
+            <p>Sweet and energetic companion.</p>
+            <ul class="dog-details">
+              <li><strong>Breed:</strong> Chihuahua</li>
+              <li><strong>Age:</strong> 13 years</li>
+              <li><strong>Gender:</strong> Female</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-center mb-4">
+          <img src="../public/images/Germ.png" class="card-img-top">
+          <div class="card-body">
+            <h5>Max</h5>
+            <p>Loyal and intelligent family dog.</p>
+            <ul class="dog-details">
+              <li><strong>Breed:</strong> German Shepherd</li>
+              <li><strong>Age:</strong> 1 year</li>
+              <li><strong>Gender:</strong> Male</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-center mb-4">
+          <img src="../public/images/pug.png" class="card-img-top">
+          <div class="card-body">
+            <h5>Lucy</h5>
+            <p>Playful and affectionate.</p>
+            <ul class="dog-details">
+              <li><strong>Breed:</strong> Pug</li>
+              <li><strong>Age:</strong> 7 years</li>
+              <li><strong>Gender:</strong> Female</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <section class="container mb-4 text-center">
+    <h2 class="mb-3">Why Choose Adoption?</h2>
+
+    <p class="mx-auto" style="max-width: 800px;">
+      Adopting a dog from Forever Paws not only gives a deserving animal a second chance at life but also brings immeasurable joy and companionship into your home. By choosing adoption, you are helping to reduce the number of homeless pets and supporting our efforts to rescue and care for more dogs in need. Adopted dogs often show immense gratitude and love, making them wonderful additions to any family. When you adopt from Forever Paws, you are not just giving a dog a home; you are gaining a loyal friend for life.
+    </p>
+  </section>
+
+  
+  <section class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6 text-center">
+        <img src="../public/images/happydog.jpg" class="img-fluid rounded w-75">
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="container mt-3 mb-4 text-center">
+    <h2 class="mb-3">Get Involved</h2>
+
+    <p class="mx-auto" style="max-width: 800px;">
+      There are many ways to get involved with Forever Paws beyond adoption. You can volunteer your time to help care for the dogs, assist with events, or even foster dogs in need of temporary homes. Donations are also greatly apreciated and go directly towards providing food, medical care, and shelter for the dogs we rescue. By supporting Forever Paws, you are making a tangible difference in the lives of countless dogs and helping us continue our mission of rescue and rehoming.
+    </p>
+  </section>
+
+
+      <footer class=" text-white py-5">
+      <div class="container text-center">
+        <h2 class="mb-3">Request More Information</h2>
+
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <p>Forever Paws is dedicated to finding forever homes for dogs.</p>
+          </div>
+        </div>
+
+        <div class="mt-3">
+          <button type="button" onclick="SayContact()" class="btn btn-primary btn-lg rounded-pill px-5">Contact Us</button>
+        </div>
+
+        <div class="mt-3 small">© 2026 Forever Paws.</div>
+
+        <hr class="border-light my-3" />
+
+        <div class="row text-center text-md-start align-items-center">
+          <div class="col-md-4 mb-4 mb-md-0 text-center">
+            <a href="#">
+              <img
+                src="../public/images/Logo3.png"
+                width="120"
+                alt="Forever Paws Logo"
+              />
+            </a>
+          </div>
+
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="d-flex justify-content-center gap-4 footer-links">
+              <a href="dogs.html" class="text-white text-decoration-none">Dogs</a>
+              <a href="adoption.html" class="text-white text-decoration-none">Adoption</a>
+              <a href="donate.html" class="text-white text-decoration-none">Donate</a>
+            </div>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <div class="d-flex justify-content-center gap-4 fs-4">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noreferrer"
+                class="text-white"
+              >
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noreferrer"
+                class="text-white"
+              >
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noreferrer"
+                class="text-white"
+              >
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./mainpage/index.js"></script>
+  
+</body>
+</html>
