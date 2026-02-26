@@ -44,6 +44,29 @@
 
 }
 
+.read-more-btn {
+  background-color: #A78E6D ;
+  border-color: #A78E6D ;
+}
+.read-more-btn:hover, .read-more-btn:active {
+  background-color: #524C43 !important;
+  border-color: #524C43;
+}
+
+.show-less-btn {
+  background-color: #A78E6D;
+  border-color: #A78E6D;
+} 
+.show-less-btn:hover {
+  background-color: #524C43;
+  border-color: #524C43;
+}
+
+.indent-text {
+  text-indent: 2em;   
+  text-align: justify; 
+}
+
 
 .card-img-top {
   height: 200px;
