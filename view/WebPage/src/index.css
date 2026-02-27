@@ -88,9 +88,14 @@
   font-size: 0.9rem;
 }
 
-.prev-next-buttons a, .prev-next-buttons a:active {
+.prev-next-buttons a {
   background-color: #A78E6D;
   border-color: #A78E6D;
+}
+
+.prev-next-buttons a:active{
+  background-color: #675D50 !important;
+  border-color:#675D50 !important;
 }
 
  .prev-next-buttons a:hover{
@@ -98,7 +103,6 @@
   border-color: #675D50;
   
  }
-
 
 .care-text {
   max-width: 800px;
@@ -109,6 +113,12 @@
   max-width: 600px;
   margin: auto;
   text-align: left;
+}
+
+.page-indicators {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  font-size: 12px;
 }
 
 
