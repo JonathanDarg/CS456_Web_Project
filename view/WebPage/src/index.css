@@ -88,6 +88,17 @@
   font-size: 0.9rem;
 }
 
+.prev-next-buttons a, .prev-next-buttons a:active {
+  background-color: #A78E6D;
+  border-color: #A78E6D;
+}
+
+ .prev-next-buttons a:hover{
+  background-color: #675D50;
+  border-color: #675D50;
+  
+ }
+
 
 .care-text {
   max-width: 800px;

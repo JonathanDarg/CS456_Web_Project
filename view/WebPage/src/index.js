@@ -20,3 +20,17 @@ function HideAdditionalInfo() {
     let info = document.getElementById("additional-info");
     info.style.display = "none";
 }
+
+function ShowDogsPage2() {
+    let dogsPage1 = document.getElementById("dogs_page1");
+    dogsPage1.style.display = "none";
+    let dogsPage2 = document.getElementById("dogs_page2");
+    dogsPage2.style.display = "block";
+}
+
+function HideDogsPage2() {
+    let dogsPage2 = document.getElementById("dogs_page2");
+    let dogsPage1 = document.getElementById("dogs_page1");
+    dogsPage1.style.display = "block";
+    dogsPage2.style.display = "none";
+}   
