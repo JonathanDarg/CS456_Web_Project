@@ -34,3 +34,11 @@ function HideDogsPage2() {
     dogsPage1.style.display = "block";
     dogsPage2.style.display = "none";
 }   
+
+var Submit_Dog = function(){
+    return window.confirm("Confirm your submission.");
+}
+
+function Upload_Picture() {
+    window.alert("uploaded picture.")
+}

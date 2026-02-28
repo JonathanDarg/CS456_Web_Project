@@ -53,13 +53,15 @@
   border-color: #524C43;
 }
 
-.show-less-btn {
+.btn-color {
   background-color: #A78E6D;
   border-color: #A78E6D;
+  color: white;
 } 
-.show-less-btn:hover {
+.btn-color:hover {
   background-color: #524C43;
   border-color: #524C43;
+  color: white;
 }
 
 .indent-text {

@@ -187,7 +187,7 @@
       <button
         type="button"
         onclick="HideAdditionalInfo()"
-        class="btn btn-secondary rounded-pill px-3 show-less-btn">
+        class="btn btn-secondary rounded-pill px-3 btn-color">
         Show Less
       </button>
     </div>
@@ -539,25 +539,101 @@
       </p>
     </section>
 
-    <secion class="dog-selection">
-      <button id="show-form">Add a Dog</button>
+    <section class="container my-5">
 
-      <div id="dog-container">
-        <form id="form">
-          <h2>Add a Dog</h2>
-          <label>Breed</label>
+  <div class="row align-items-stretch">
 
-          <label>Age</label>
+    <div class="col-md-6 d-flex flex-column text-justify">
 
-          <label>Gender</label>
+      <div>
+        <h2 class="mb-3 text-center">Dogs in Need of Help</h2>
 
-          <label>Description</label>
+        <p>
+          Every day, dogs in our communities face abandonment, neglect,
+          or unsafe living conditions. Many of these animals depend on
+          compassionate people to speak up and help them find safety,
+          medical care, and loving homes. If you know of a dog that may
+          need assistance whether they are a stray, in a difficult
+          situation, or simply need to be rehomed you can help us
+          make a difference.
+        </p>
 
-          <button type="submit">Submit</button>
-        </form>
+        <p>
+          Our organization works closely with volunteers, foster families,
+          and local rescue partners to evaluate each situation carefully.
+          Once a report is submitted, we review the information provided
+          and determine the best way to help, whether that means arranging
+          rescue support, connecting owners with resources, or helping
+          the dog transition into a safe and caring environment. Every
+          submission helps us better understand where help is needed most.
+        </p>
+
+        <p>
+          By submitting information about a dog in need, you allow our
+          team and volunteers to review the situation and connect the
+          animal with the right resources. Even small actions can lead
+          to life-changing outcomes for these dogs. Together, we can
+          ensure that more animals receive the care, attention, and
+          second chances they deserve.
+        </p>
       </div>
-    </secion>
+      <!-- 
+      <div class="my-4">
+        <button type="button" onclick="Add_Dog_form()"; class="btn btn-color">
+          Submit a Dog
+        </button>
+      </div>
+      leave in if want to hide/show form
+      -->
 
+    </div>
+    
+    <div class="col-md-6 d-flex justify-content-center align-items-center">
+    
+      <div id="help-dogs-container" class="p-4 border rounded shadow-sm" style="max-width: 400px; width: 100%;">
+  
+        <form id="form">
+          <h4 class="mb-4 text-center">Add a Dog</h4>
+        
+          <div class="mb-3">
+            <label for="breed" class="form-label">Breed</label>
+            <input type="text" id="breed" class="form-control" required>
+          </div>
+        
+          <div class="mb-3">
+            <label for="age" class="form-label">Age</label>
+            <input type="number" id="age" class="form-control" required>
+          </div>
+        
+          <div class="mb-3">
+            <label for="gender" class="form-label">Gender</label>
+            <select id="gender" class="form-select" required>
+              <option value="">Select gender</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+        
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea id="description" class="form-control" rows="2" required></textarea>
+          </div>
+
+          <button type="button" onclick="Upload_Picture()"; class="mb-3" >Upload picture</button>
+        
+          <button type="submit" onclick="return Submit_Dog()"; class="btn btn-color w-100">Submit</button>
+        
+        </form>
+      
+      </div>
+    
+    </div>
+
+    </div>
+    
+    </section>
+
+  
     <footer class="text-white py-5">
       <div class="container text-center">
         <h2 class="mb-3">Request More Information</h2>
