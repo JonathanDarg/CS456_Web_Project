@@ -93,6 +93,7 @@
 .prev-next-buttons a {
   background-color: #A78E6D;
   border-color: #A78E6D;
+  transform: translateX(-10px); 
 }
 
 .prev-next-buttons a:active{
