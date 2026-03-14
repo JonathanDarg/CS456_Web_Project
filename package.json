@@ -1,0 +1,29 @@
+{
+  "name": "cs456_web_project",
+  "version": "1.0.0",
+  "description": "<h3>For windows devices</h3>\r to run our static html page, visit the view/WebPage/src directory and run the command ``` start .\\index.htm ``` in the terminal. This will open the  stand-alone full HTML file in your default browser.",
+  "main": "Server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonathanDarg/CS456_Web_Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JonathanDarg/CS456_Web_Project/issues"
+  },
+  "homepage": "https://github.com/JonathanDarg/CS456_Web_Project#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "morgan": "^1.10.1"
+  }
+}
