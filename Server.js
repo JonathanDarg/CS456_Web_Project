@@ -1,12 +1,12 @@
 let lstDogs = [
-  {"id":1,"name":"Buddy","breed":"Golden Retriever","age":3,"weight":65},
-  {"id":2,"name":"Luna","breed":"Labrador Retriever","age":2,"weight":55},
-  {"id":3,"name":"Max","breed":"German Shepherd","age":4,"weight":75},
-  {"id":4,"name":"Bella","breed":"French Bulldog","age":3,"weight":28},
-  {"id":5,"name":"Charlie","breed":"Beagle","age":5,"weight":30},
-  {"id":6,"name":"Daisy","breed":"Poodle","age":2,"weight":45},
-  {"id":7,"name":"Rocky","breed":"Rottweiler","age":6,"weight":95},
-  {"id":8,"name":"Milo","breed":"Siberian Husky","age":3,"weight":50}
+  {_id: 1, name: 'Buddy', breed: 'Golden Retriever', age: '3', description: 'Friendly and great with families'},
+  {_id: 2, name: 'Max', breed: 'German Shepherd', age: '5', description: 'Loyal and highly intelligent working dog'},
+  {_id: 3, name: 'Bella', breed: 'Bulldog', age: '4', description: 'Calm, courageous, and loves lounging'},
+  {_id: 4, name: 'Charlie', breed: 'Beagle', age: '2', description: 'Curious and energetic with a great sense of smell'},
+  {_id: 5, name: 'Lucy', breed: 'Poodle', age: '6', description: 'Very smart and hypoallergenic coat'},
+  {_id: 6, name: 'Rocky', breed: 'Rottweiler', age: '7', description: 'Confident and protective companion'},
+  {_id: 7, name: 'Daisy', breed: 'Dachshund', age: '1', description: 'Playful and brave with a long body'},
+  {_id: 8, name: 'Luna', breed: 'Siberian Husky', age: '3', description: 'Energetic with striking blue eyes'}
 ];
 
 let hostname = "localhost";
