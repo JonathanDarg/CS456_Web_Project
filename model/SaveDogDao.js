@@ -11,7 +11,7 @@ let lstDogs = [
 
 
 // Create and save a new dog 
-exports.createDog = async (dog) => {
+exports.createDog = function(dog){
   let genId = lstDogs[ lstDogs.length -1 ]._id +1;
   dog._id = genId;
 
@@ -21,12 +21,12 @@ exports.createDog = async (dog) => {
 };
 
 // Get all Dog
-exports.getAllDogs = async () => {
+exports.getAllDogs = function(){
   return lstDogs;
 };
 
 // Get an Dog by its ID
-exports.getDogById = async (id) => {
+exports.getDogById = function(id){
   let dog = null;
   for(let i=0; i<lstDogs.length; i++){
     if( lstDogs[i]._id === id ){
@@ -53,7 +53,7 @@ exports.update = function(dog){
 }
 
 // Delete an Dog by its ID
-exports.deleteDog = async (id) => {
+exports.deleteDog = function(id){
   let dog = null;
   let pos = -1;
   for(let i=0; i<lstDogs.length; i++){
