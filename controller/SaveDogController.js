@@ -1,47 +1,42 @@
 const dao = require('../model/SaveDogDao');
 
 exports.getAll = function(req, res) {
-    dao.getAll().then(function(dogs) {
-        if (dogs) {
-            res.json(dogs);
-        } else {
-            res.json({ error: "No dogs found" });
-        }
-    });
+    const dogs = dao.getAllDogs();
+    if(dogs && dogs.length > 0){
+        res.json(dogs);
+    } else {
+        res.json({ error: "No dogs found" });
+    }
 };
 
 exports.get = function(req, res) {
-    const id = req.params.id;
+    const id = parseInt( req.params.id );
 
-    dao.getOne(id).then(function(dog) {
-        if (dog) {
-            res.json(dog);
-        } else {
-            res.json({ error: "Dog not found" });
-        }
-    });
+    const dog = dao.getDogById(id);
+    if(dog){
+        res.json(dog);
+    } else {
+        res.json({ error: "Dog not found" });
+    }
 };
 
 exports.postCreateUpdate = function(req, res) {
     const dogData = req.body;
 
-    if (dogData) {
-        dao.save(dogData).then(function(result) {
-            res.json({ success: true, data: result });
-        });
+    if(dogData._id){
+        dao.update(dogData);
     } else {
-        res.json({ error: "No data provided" });
+        dao.createDog(dogData);
     }
+    res.redirect("dogspage.html");
 };
 
 exports.getDelete = function(req, res) {
-    const id = req.params.id;
+    const id = parseInt(req.params.id);
 
-    if (id) {
-        // This is the delete function your partner added
-        dao.deleteDog(id).then(function() {
-            res.json({ deleted: true, id: id });
-        });
+   if(id){
+        dao.deleteDog(id);
+        res.redirect("dogspage.html");
     } else {
         res.json({ error: "Missing ID" });
     }
