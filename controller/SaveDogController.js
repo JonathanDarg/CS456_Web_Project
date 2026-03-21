@@ -28,6 +28,7 @@ exports.postCreateUpdate = function(req, res) {
     let dname = req.body.txt_name; 
     let dbreed = req.body.txt_breed;
     let dage = req.body.int_age;
+    let dgender = req.body.txt_gender;
     let ddescription = req.body.txt_description;
     let approved = 0; 
 
@@ -39,12 +40,12 @@ exports.postCreateUpdate = function(req, res) {
         // update operation
         console.log("Update...");
         let id = parseInt( req.body.txt_id);
-        let newdog = {_id: id, name: dname, breed:dbreed, age: dage, description: ddescription, is_approved: approved}; //creates a user object (like the ones we have on lstUsers array)
+        let newdog = {_id: id, name: dname, breed:dbreed, age: dage, gender: dgender, description: ddescription, is_approved: approved}; //creates a user object (like the ones we have on lstUsers array)
         dao.update(newdog);
 
     } else {
         // create/insert operation
-        let newdog = {name: dname, breed:dbreed, age: dage, description: ddescription, is_approved: approved}; //creates a user object (like the ones we have on lstUsers array)
+        let newdog = {name: dname, breed:dbreed, age: dage, gender: dgender, description: ddescription, is_approved: approved}; //creates a user object (like the ones we have on lstUsers array)
         dao.createDog(newdog);
     }
 
