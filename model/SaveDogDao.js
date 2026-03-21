@@ -1,12 +1,12 @@
 let lstDogs = [
-  {_id: 1, name: 'Buddy', breed: 'Golden Retriever', age: '3', description: 'Friendly and great with families'},
-  {_id: 2, name: 'Max', breed: 'German Shepherd', age: '5', description: 'Loyal and highly intelligent working dog'},
-  {_id: 3, name: 'Bella', breed: 'Bulldog', age: '4', description: 'Calm, courageous, and loves lounging'},
-  {_id: 4, name: 'Charlie', breed: 'Beagle', age: '2', description: 'Curious and energetic with a great sense of smell'},
-  {_id: 5, name: 'Lucy', breed: 'Poodle', age: '6', description: 'Very smart and hypoallergenic coat'},
-  {_id: 6, name: 'Rocky', breed: 'Rottweiler', age: '7', description: 'Confident and protective companion'},
-  {_id: 7, name: 'Daisy', breed: 'Dachshund', age: '1', description: 'Playful and brave with a long body'},
-  {_id: 8, name: 'Luna', breed: 'Siberian Husky', age: '3', description: 'Energetic with striking blue eyes'}
+  {_id: 1, name: 'Buddy', breed: 'Golden Retriever', age: 3, description: 'Friendly and great with families', is_approved:1},
+  {_id: 2, name: 'Max', breed: 'German Shepherd', age: 5, description: 'Loyal and highly intelligent working dog', is_approved:1},
+  {_id: 3, name: 'Bella', breed: 'Bulldog', age: 4, description: 'Calm, courageous, and loves lounging', is_approved:1},
+  {_id: 4, name: 'Charlie', breed: 'Beagle', age: 2, description: 'Curious and energetic with a great sense of smell', is_approved:0},
+  {_id: 5, name: 'Lucy', breed: 'Poodle', age: 6, description: 'Very smart and hypoallergenic coat', is_approved:0},
+  {_id: 6, name: 'Rocky', breed: 'Rottweiler', age: 7, description: 'Confident and protective companion', is_approved:0},
+  {_id: 7, name: 'Daisy', breed: 'Dachshund', age: 1, description: 'Playful and brave with a long body', is_approved:0},
+  {_id: 8, name: 'Luna', breed: 'Siberian Husky', age: 3, description: 'Energetic with striking blue eyes', is_approved:0}
 ];
 
 
