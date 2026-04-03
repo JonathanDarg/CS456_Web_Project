@@ -5,18 +5,18 @@ test("Always green test", function(){
 });
 
 test("ReadAll Mem has the predefined dogs", function(){
-    let lstDogs = dao.getAll();
+    let lstDogs = dao.getAllDogs();
 
-    expect(lstDogs.length).toBe(6);
+    expect(lstDogs.length).toBe(8);
 });
 
-test("Create method", function(){
+test("Create a new dog", function(){
     let newdog = {name:"Pudgy", breed:"Chihuahua", age:9, gender:"Male", description:"Full of energy"};
 
-    let created = dao.save(newdog); 
-    let found = dao.getOne(created.id);
+    let created = dao.createDog(newdog); 
+    let found = dao.getDogById(created._id);
 
-    expect(created.id).toBe(found.id); 
+    expect(created._id).toBe(found._id); 
     expect(created.name).toBe(found.name);
 
     dao.deleteDog(created.id); 
