@@ -22,3 +22,7 @@ test("Create a new dog", function(){
     dao.deleteDog(created.id); 
 
 });
+
+test("Update dog", function()) {
+
+};
