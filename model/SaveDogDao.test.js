@@ -40,7 +40,7 @@ test("Update dog", function () {
 
   let newdog = dao.createDog(dog); // create the new dog
 
-  let found = dao.getDogById(c._id); 
+  let found = dao.getDogById(newdog._id); 
   expect(newdog.name).toBe(found.name); // make sure that it exists
 
   //change newdogs name or other info and expect the changes
@@ -57,4 +57,5 @@ test("Delete dog", function () {
 
   dao.deleteDog(dogDelete._id); // delete the dog
   // expect the dog name to be null 
+  expect(dao.getDogById(dogDelete._id)).toBeNull();
 });
