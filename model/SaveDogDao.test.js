@@ -29,7 +29,7 @@ test("Create a new dog", function () {
 });
 
 test("Update dog", function () {
-  let newdog = {
+  let dog = {
     // create the dog
     name: "Luke",
     breed: "Golden Retreiver",
@@ -38,16 +38,23 @@ test("Update dog", function () {
     description: "Energetic",
   };
 
-  let create = dao.createDog(newdog); // create the new dog
-  let found = dao.getDogById(created._id); // make sure that it exists
-  expect(found.name).toBe("Thor"); // assert name
+  let newdog = dao.createDog(dog); // create the new dog
 
-  dao.update(found); // update dog
+  let found = dao.getDogById(c._id); 
+  expect(newdog.name).toBe(found.name); // make sure that it exists
+
+  //change newdogs name or other info and expect the changes
+
+  dao.update(newdog); // update dog
+  expect(newdog.name).toBe("Thor"); // assert name
 });
 
 test("Delete dog", function () {
   let lstDogs = dao.getAllDogs(); // pick an existing dog from the website
+
   let dogDelete = lstDogs[0]; // get the first dog
+  expect(dogDelete.name).toBe("Buddy");
 
   dao.deleteDog(dogDelete._id); // delete the dog
+  // expect the dog name to be null 
 });
