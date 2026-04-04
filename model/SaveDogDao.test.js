@@ -49,13 +49,14 @@ test("Update dog", function () {
 
   dao.update(newdog); // update dog in DAO
 
-  let update = dao.getDogById(newdog._id); // get the updated dog
+  let updated = dao.getDogById(newdog._id); // get the updated dog
 
   //check that the changes were made and saved
   expect(updated.name).toBe("Thor");
   expect(updated.age).toBe(5);
 
   // now delete the original dog
+  dao.deleteDog(newdog._id);
 });
 
 test("Delete dog", function () {
