@@ -63,6 +63,23 @@ test("Update dog by invalid id", function () {
   expect(dao.getAllDogs().length).toBe(8);
 });
 
+test("Delete invalid dog", function () {
+   let fakeDog = {
+    _id: 10, 
+    name: "Pudgyyy",
+    breed: "Chihuahua",
+    age: 9,
+    gender: "Male",
+    description: "Full of energy",
+  };
+
+  dao.deleteDog(fakeDog._id); // try to delete a dog with an invalid id
+
+  // expect the dog list to be the same 
+  expect(dao.getAllDogs().length).toBe(8);
+
+});
+
 test("Delete dog", function () {
   let lstDogs = dao.getAllDogs(); // pick an existing dog from the website
 
@@ -70,6 +87,8 @@ test("Delete dog", function () {
   expect(dogDelete.name).toBe("Thor");
 
   dao.deleteDog(dogDelete._id); // delete the dog
+
   // expect the dog name to be null
   expect(dao.getDogById(dogDelete._id)).toBeNull();
+  expect(dao.getAllDogs().length).toBe(7);
 });
