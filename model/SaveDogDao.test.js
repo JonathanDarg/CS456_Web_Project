@@ -46,8 +46,8 @@ test("Update dog", function () {
 });
 
 test("Delete dog", function () {
-  let created = dao.createDog(newdog); // create the dog
+  let lstDogs = dao.getAllDogs(); // pick an existing dog from the website
+  let dogDelete = lstDogs[0]; // get the first dog
 
-  let found = dao.getDogById(created._id);
-  expect(found);
+  dao.deleteDog(dogDelete._id); // delete the dog
 });
