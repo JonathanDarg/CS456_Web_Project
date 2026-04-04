@@ -24,5 +24,12 @@ test("Create a new dog", function(){
 });
 
 test("Update dog", function()) {
+    let dog = {
+
+    };
+
+};
+
+test("Delete dog", function()) {
 
 };
