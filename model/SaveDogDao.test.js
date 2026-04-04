@@ -24,7 +24,7 @@ test("Create a new dog", function(){
 });
 
 test("Update dog", function() {
-    let newdog = {
+    let newdog = { // create the dog 
         name: "Luke",
         breed: "Golden Retreiver",
         age: 4,
@@ -34,11 +34,12 @@ test("Update dog", function() {
 
     let created = dao.createDog(newdog);
 
-    let update = dao.createDog(created);
+    let update = dao.createDog(created); //update the dog
     let found = dao.getDogById(created._id);
 
-
-)};
+    expect(update.name).toBe("Thor"); // assert name
+    expect(update.age).toBe(5); // assert age
+});
 
 test("Delete dog", function()) {
 
