@@ -32,13 +32,15 @@ test("Update dog", function() {
         description: "Energetic"
     };
 
-    let created = dao.createDog(newdog);
-
-    let update = dao.createDog(created); //update the dog
+    let create = dao.createDog(newdog); //update the dog
     let found = dao.getDogById(created._id);
 
     expect(update.name).toBe("Thor"); // assert name
     expect(update.age).toBe(5); // assert age
+
+    dao.update(found);
+
+    let update = 
 });
 
 test("Delete dog", function()) {
