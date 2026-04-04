@@ -54,9 +54,6 @@ test("Update dog", function () {
   //check that the changes were made and saved
   expect(updated.name).toBe("Thor");
   expect(updated.age).toBe(5);
-
-  // now delete the original dog
-  dao.deleteDog(newdog._id);
 });
 
 test("Delete dog", function () {
