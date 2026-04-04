@@ -32,7 +32,11 @@ test("Update dog", function() {
         description: "Energetic"
     };
 
-    let created = 
+    let created = dao.createDog(newdog);
+
+    let update = dao.createDog(created);
+    let found = dao.getDogById(created._id);
+
 
 )};
 
