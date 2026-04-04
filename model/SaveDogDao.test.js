@@ -23,12 +23,16 @@ test("Create a new dog", function(){
 
 });
 
-test("Update dog", function()) {
+test("Update dog", function() {
     let dog = {
-
+        name: "Luke",
+        breed: "Golden Retreiver",
+        age: 4,
+        gender: "Male",
+        description: "Energetic"
     };
 
-};
+)};
 
 test("Delete dog", function()) {
 
