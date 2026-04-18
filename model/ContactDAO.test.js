@@ -18,3 +18,19 @@ test("Create new contact", async function () {
   let created = await dao.create(newcontact);
   let found = await dao.read(created._id);
 });
+
+test("Update contact", async function () {
+  let newcontact = {
+    name: "Rocky",
+    description: "Loveable",
+  };
+
+  let created = await dao.create(newcontact);
+  let contact = await dao.read(created._id);
+  expect(contact.name).toBe("Rocky");
+
+  contact.name = "Thor";
+  contact.description = "Updated";
+
+  await dao.update(contact);
+});
