@@ -21,7 +21,7 @@ test("Create new contact", async function () {
   let found = await dao.read(created._id);
 
   expect(created._id.toString().toBe(found._id.toString()));
-  expeect(created.name).toBe(found.name);
+  expect(created.name).toBe(found.name);
 });
 
 test("Update contact", async function () {
