@@ -14,7 +14,7 @@ test("ReadAll contacts", async function () {
 test("Create new contact", async function () {
   let newcontact = {
     name: "Buddy",
-    description: "Hyper",
+    message: "Hyper",
   };
 
   let created = await dao.create(newcontact);
@@ -27,7 +27,7 @@ test("Create new contact", async function () {
 test("Update contact", async function () {
   let newcontact = {
     name: "Rocky",
-    description: "Loveable",
+    message: "Loveable",
   };
 
   let created = await dao.create(newcontact);
@@ -35,20 +35,20 @@ test("Update contact", async function () {
   expect(contact.name).toBe("Rocky");
 
   contact.name = "Thor";
-  contact.description = "Updated";
+  contact.message = "Updated";
 
   await dao.update(contact);
 
   let updated = await dao.read(contact._id);
 
   expect(updated.name).toBe("Thor");
-  expect(updated.description).toBe("Updated");
+  expect(updated.message).toBe("Updated");
 });
 
 test("Delete contact", async function () {
   let newcontact = {
     name: "Thor",
-    description: "Testing delete",
+    message: "Testing delete",
   };
 
   let created = await dao.create(newcontact);
