@@ -31,6 +31,13 @@ app.get("/dog",function(req,res){
 });
 
 
-const server = app.listen(port,hostname,function(){ // Asynchronous Listen to client requests in hostname:port
-    console.log(`Server running on http://${hostname}:${port}/index.html`); // Must be here due to the asynchronous nature of the app.listen()
+require('dotenv').config();
+const dbcon = require('./model/DbConnection');
+dbcon.connect();
+
+const ExpApp = require('./app');
+
+
+const server = ExpApp.app.listen(process.env.PORT,process.env.HOSTNAME,function(){ // Asynchronous Listen to client requests in hostname:port
+    console.log(`Server running on ${process.env.HOSTNAME}:${process.env.PORT}`); // Must be here due to the asynchronous nature of the app.listen()
 });

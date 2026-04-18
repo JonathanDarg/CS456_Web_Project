@@ -1,12 +1,16 @@
 require('dotenv').config();
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-exports.connect = function(where){
-    let uri = process.env.DB_URI; //production DB
-    if(where==='test') uri = process.env.TESTDB_URI; //Test DB
-    if(process.env.CI) uri = 'mongodb://adm:secret@localhost:27017';
+exports.connect = async function(where){
+    let uri = process.env.DB_URI;
+    if(where === 'test') uri = process.env.TESTDB_URI;
+    if(process.env.CI) uri = "mongodb://adm:secret@localhost:27017"; //CI test
 
-    mongoose.connect(uri);
+    try{
+        await mongoose.connect(uri);
+    }catch(error){
+        console.log(error);
+    }
 }
 
 exports.disconnect = async function(){
