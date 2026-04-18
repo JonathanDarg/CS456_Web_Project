@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
 const contactSchema = mongoose.Schema({
-    name: String,
-    message: String, 
+    name: { type: String, required: true },
+    message: { type: String, required: true }
 });
 
 const contactModel = mongoose.model('contact', contactSchema);
@@ -13,7 +13,7 @@ exports.readAll = async function(){
 }
 
 exports.read = async function(id){
-    const contact = await contactModel.findById(id);
+    const contact = await contactModel.findById(id); 
     return contact;
 }
 
@@ -25,7 +25,7 @@ exports.create = async function(contact){
 
 exports.update = async function(contact){
     return await contactModel.findByIdAndUpdate(
-        contact._id,
+        contact._id, 
         { name: contact.name, message: contact.message },
         { new: true, runValidators: true }
     );
