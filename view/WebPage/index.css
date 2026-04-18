@@ -64,6 +64,21 @@
   color: white;
 }
 
+.contact-form-note {
+  color: #675D50;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#contactModal .modal-content {
+  border-radius: 1rem;
+}
+
+#contactModal .form-control:focus {
+  border-color: #A78E6D;
+  box-shadow: 0 0 0 0.2rem rgba(167, 142, 109, 0.2);
+}
+
 .indent-text {
   text-indent: 2em;   
   text-align: justify; 

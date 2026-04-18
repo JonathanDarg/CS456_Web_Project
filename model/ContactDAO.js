@@ -41,4 +41,3 @@ exports.deleteAll = async function(check){
         await contactModel.deleteMany();
     }
 }
-

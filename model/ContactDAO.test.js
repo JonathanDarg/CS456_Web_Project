@@ -2,17 +2,19 @@ const dao = require("./ContactDAO");
 const mongoose = require("mongoose");
 const dbcon = require('./DbConnection');
 
-beforeAll(async function(){ // Executed ONCE per file - before any test
+beforeAll(async function(){ 
     await dbcon.connect("test");
     await dao.deleteAll("test");
 });
-afterAll(async function(){ // Executed ONCE per file - after all tests
+
+afterAll(async function(){ 
     await dbcon.disconnect();
 });
 
-afterEach(async function(){ //Execute after EACH test
+afterEach(async function(){ 
     await dao.deleteAll("test");
 });
+
 
 test("Always green test", function () {
   expect(1).toBe(1);

@@ -43,7 +43,7 @@ exports.postCreateUpdate = async function(req,res){
         await dao.create(newcontact);
     }
 
-    res.redirect("contactpage.html");
+    //res.redirect("../../view/WebPage/index.html");
 }
 
 exports.getDelete = async function(req,res){
@@ -51,5 +51,5 @@ exports.getDelete = async function(req,res){
 
     await dao.del(id);
     
-    res.redirect("../contactpage.html")
+    //res.redirect("../../view/WebPage/index.html")
 };
