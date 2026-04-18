@@ -43,13 +43,17 @@ exports.postCreateUpdate = async function(req,res){
         await dao.create(newcontact);
     }
 
-    //res.redirect("../../view/WebPage/index.html");
+    res.redirect("../../view/WebPage/contactpage.html");
 }
 
-exports.getDelete = async function(req,res){
-    let id = req.params.id; 
-
-    await dao.del(id);
+exports.getDelete = async function(req, res) {
+    let id = req.params.uid;  
     
-    //res.redirect("../../view/WebPage/index.html")
+    try {
+        const result = await dao.del(id);
+        res.status(200).send({ msg: 'Deleted successfully' });
+        
+    } catch(err) {
+        res.status(500).send({ msg: err.message });
+    }
 };

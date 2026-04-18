@@ -39,5 +39,5 @@ const ExpApp = require('./app');
 
 
 const server = ExpApp.app.listen(process.env.PORT,process.env.HOSTNAME,function(){ // Asynchronous Listen to client requests in hostname:port
-    console.log(`Server running on ${process.env.HOSTNAME}:${process.env.PORT}`); // Must be here due to the asynchronous nature of the app.listen()
+    console.log(`Server running on http://${process.env.HOSTNAME}:${process.env.PORT}/index.html`); // Must be here due to the asynchronous nature of the app.listen()
 });

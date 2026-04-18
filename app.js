@@ -16,8 +16,8 @@ app.use(express.json());
 
 // Contact routes
 app.get("/contact", contactCont.getAll);
-app.get("/contact/:uid", contactCont.get);
+app.get('/contact/delete/:uid', contactCont.getDelete);  
+app.get("/contact/:uid", contactCont.get);               
 app.post("/contact", contactCont.postCreateUpdate);
-app.get('/deletecontact/:uid', contactCont.getDelete);
 
 module.exports = { app };
