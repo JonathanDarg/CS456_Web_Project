@@ -20,7 +20,7 @@ test("Create new contact", async function () {
   let created = await dao.create(newcontact);
   let found = await dao.read(created._id);
 
-  expect(created._id.toString().toBe(found._id.toString()));
+  expect(created._id.toString()).toBe(found._id.toString());
   expect(created.name).toBe(found.name);
 });
 
