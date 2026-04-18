@@ -12,7 +12,7 @@ exports.readAll = async function(){
     return lstcontacts;
 }
 
-exports.read = async function(uid){
+exports.read = async function(id){
     const contact = await contactModel.findById(id);
     return contact;
 }
@@ -24,14 +24,14 @@ exports.create = async function(contact){
 }
 
 exports.update = async function(contact){
-    const updated = await contactModel.findByIdAndUpdate(
-        contact,
+    return await contactModel.findByIdAndUpdate(
+        contact._id,
+        { name: contact.name, message: contact.message },
         { new: true, runValidators: true }
     );
-    return updated;
 }
 
-exports.del = async function(uid){
+exports.del = async function(id){
     const contact = await contactModel.findByIdAndDelete(id);
     return contact;
 }
