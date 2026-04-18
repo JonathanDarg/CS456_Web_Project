@@ -1,4 +1,6 @@
 const dao = require("./ContactDAO");
+const mongoose = require("mongoose");
+require("./DBConnection");
 
 test("Always green test", function () {
   expect(1).toBe(1);
