@@ -36,3 +36,16 @@ test("Update contact", async function () {
 
   await dao.update(contact);
 });
+
+test("Delete contact", async function () {
+  let newcontact = {
+    name: "Thor",
+    description: "Testing delete",
+  };
+
+  let created = await dao.create(newcontact);
+  let found = await dao.read(created._id);
+  expect(found.name).toBe("Thor");
+
+  await dao.del(created._id);
+});
