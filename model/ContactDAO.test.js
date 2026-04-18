@@ -8,7 +8,7 @@ test("Always green test", function () {
 
 test("ReadAll contacts", async function () {
   let lstcontacts = await dao.readAll();
-  expect(lstcontacts.length).toBe(lstcontacts.length);
+  expect(lstcontacts.length).toBe(0);
 });
 
 test("Create new contact", async function () {
@@ -38,6 +38,11 @@ test("Update contact", async function () {
   contact.description = "Updated";
 
   await dao.update(contact);
+
+  let updated = await dao.read(contact._id);
+
+  expect(updated.name).toBe("Thor");
+  expect(updated.description).toBe("Updated");
 });
 
 test("Delete contact", async function () {
